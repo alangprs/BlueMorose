@@ -1,24 +1,249 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wQl-Sn-HdZ">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="BlueMorose" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="78" translatesAutoresizingMaskIntoConstraints="NO" id="vjW-TR-88j">
+                                <rect key="frame" x="46" y="269" width="336" height="388"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="it0-C9-K8w">
+                                        <rect key="frame" x="0.0" y="0.0" width="336" height="77.333333333333329"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment>
+                                                    <string key="content">台灣憂鬱症表
+(18歲以上成人適用)</string>
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="28" name="STYuanti-TC-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <segue destination="wQl-Sn-HdZ" kind="show" identifier="topic01" id="8wW-Tz-bGp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fIc-Xc-Pgg">
+                                        <rect key="frame" x="0.0" y="155.33333333333331" width="336" height="77.333333333333314"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment>
+                                                    <string key="content">董事憂鬱量表-大專生版
+(18~24歲適用)</string>
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="28" name="STYuanti-TC-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <segue destination="wQl-Sn-HdZ" kind="show" identifier="topic02" id="qok-bh-gHw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GkG-eD-Tai">
+                                        <rect key="frame" x="0.0" y="310.66666666666663" width="336" height="77.333333333333314"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment>
+                                                    <string key="content">青少年憂鬱情緒自我檢查表
+(12~18歲適用)</string>
+                                                    <attributes>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="0.50341625087308572" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="28" name="STYuanti-TC-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <segue destination="wQl-Sn-HdZ" kind="show" identifier="topic03" id="b0A-vu-lNy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vjW-TR-88j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Bz-er-FK3"/>
+                            <constraint firstItem="vjW-TR-88j" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lHF-0K-GOo"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ASH-VH-qpP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="955.38461538461536" y="83.175355450236964"/>
+        </scene>
+        <!--Topics View Controller-->
+        <scene sceneID="cxE-TU-gjS">
+            <objects>
+                <viewController id="wQl-Sn-HdZ" customClass="TopicsViewController" customModule="BlueMorose" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ikf-fJ-fon">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="kNJ-gL-b7b">
+                                <rect key="frame" x="47" y="506" width="334" height="219"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JtY-g5-xoz">
+                                        <rect key="frame" x="19" y="0.0" width="296" height="42"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="沒有或極少(每週一天以下)">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOa-dJ-leJ">
+                                        <rect key="frame" x="19" y="59" width="296" height="42"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="有時候(每週1~2天)">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bix-59-sY9">
+                                        <rect key="frame" x="19" y="118" width="296" height="42"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="時常(每週3~4天)">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67V-n5-P1M">
+                                        <rect key="frame" x="19" y="177" width="296" height="42"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="常常或總是(每週5~7天)">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="67V-n5-P1M" firstAttribute="leading" secondItem="JtY-g5-xoz" secondAttribute="leading" id="0mz-kH-DYy"/>
+                                    <constraint firstItem="67V-n5-P1M" firstAttribute="trailing" secondItem="JtY-g5-xoz" secondAttribute="trailing" id="42i-GA-Idt"/>
+                                    <constraint firstItem="IOa-dJ-leJ" firstAttribute="leading" secondItem="JtY-g5-xoz" secondAttribute="leading" id="4jP-U6-gZj"/>
+                                    <constraint firstItem="IOa-dJ-leJ" firstAttribute="trailing" secondItem="JtY-g5-xoz" secondAttribute="trailing" id="PEn-Iu-Lca"/>
+                                    <constraint firstItem="bix-59-sY9" firstAttribute="trailing" secondItem="JtY-g5-xoz" secondAttribute="trailing" id="UDJ-V4-1db"/>
+                                    <constraint firstItem="bix-59-sY9" firstAttribute="leading" secondItem="JtY-g5-xoz" secondAttribute="leading" id="kAa-lG-wHp"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="Oyc-vl-ZDB">
+                                <rect key="frame" x="20" y="130" width="388" height="313"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="crC-Pp-rKu">
+                                        <rect key="frame" x="8" y="8" width="372" height="297"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="9rr-Mb-iXZ">
+                                                <rect key="frame" x="10" y="10" width="352" height="277"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycj-0L-d88">
+                                                        <rect key="frame" x="0.0" y="0.0" width="352" height="238"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="1/18" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1K-RR-x7L">
+                                                        <rect key="frame" x="0.0" y="253" width="352" height="24"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="ycj-0L-d88" firstAttribute="top" secondItem="crC-Pp-rKu" secondAttribute="top" constant="10" id="1Xe-qv-O8v"/>
+                                            <constraint firstItem="ycj-0L-d88" firstAttribute="leading" secondItem="crC-Pp-rKu" secondAttribute="leading" constant="10" id="9Pq-ga-t9E"/>
+                                            <constraint firstAttribute="bottom" secondItem="9rr-Mb-iXZ" secondAttribute="bottom" constant="10" id="JK5-La-Sun"/>
+                                            <constraint firstAttribute="trailing" secondItem="ycj-0L-d88" secondAttribute="trailing" constant="10" id="vse-RZ-iaP"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <color key="tintColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstItem="crC-Pp-rKu" firstAttribute="leading" secondItem="Oyc-vl-ZDB" secondAttribute="leading" constant="8" id="Bgl-wJ-9VA"/>
+                                    <constraint firstItem="crC-Pp-rKu" firstAttribute="top" secondItem="Oyc-vl-ZDB" secondAttribute="top" constant="8" id="DZL-ay-pEM"/>
+                                    <constraint firstAttribute="trailing" secondItem="crC-Pp-rKu" secondAttribute="trailing" constant="8" id="cMX-BO-gxX"/>
+                                    <constraint firstAttribute="bottom" secondItem="crC-Pp-rKu" secondAttribute="bottom" constant="8" id="yro-38-ihY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xgC-We-uoU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xgC-We-uoU" firstAttribute="trailing" secondItem="Oyc-vl-ZDB" secondAttribute="trailing" constant="20" id="1pv-8e-iLB"/>
+                            <constraint firstItem="kNJ-gL-b7b" firstAttribute="top" secondItem="ikf-fJ-fon" secondAttribute="top" constant="506" id="40U-hJ-nMU"/>
+                            <constraint firstItem="Oyc-vl-ZDB" firstAttribute="leading" secondItem="xgC-We-uoU" secondAttribute="leading" constant="20" id="50C-oP-Jdk"/>
+                            <constraint firstItem="xgC-We-uoU" firstAttribute="trailing" secondItem="kNJ-gL-b7b" secondAttribute="trailing" constant="47" id="S1O-e9-F6R"/>
+                            <constraint firstItem="kNJ-gL-b7b" firstAttribute="leading" secondItem="xgC-We-uoU" secondAttribute="leading" constant="47" id="dTs-h7-3wz"/>
+                            <constraint firstItem="Oyc-vl-ZDB" firstAttribute="top" secondItem="xgC-We-uoU" secondAttribute="top" constant="42" id="yQj-SC-552"/>
+                            <constraint firstItem="kNJ-gL-b7b" firstAttribute="top" secondItem="Oyc-vl-ZDB" secondAttribute="bottom" constant="63" id="zYq-4Q-KwW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gcg-bi-szW"/>
+                    <connections>
+                        <outletCollection property="topicsLabel" destination="ycj-0L-d88" collectionClass="NSMutableArray" id="sOk-u4-pUF"/>
+                        <outletCollection property="topicsLabel" destination="m1K-RR-x7L" collectionClass="NSMutableArray" id="hQW-8A-LH4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QwX-vT-sgL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1801.5384615384614" y="81.753554502369667"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NzP-8P-gI0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IWf-WJ-qQ7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mTq-SE-vuk">
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4xf-rm-45t"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iH2-3Q-7az" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="26.153846153846153" y="83.175355450236964"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="b0A-vu-lNy"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

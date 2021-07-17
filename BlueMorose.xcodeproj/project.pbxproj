@@ -9,23 +9,29 @@
 /* Begin PBXBuildFile section */
 		4D202F8E26A0303B003B01A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D202F8D26A0303B003B01A6 /* AppDelegate.swift */; };
 		4D202F9026A0303B003B01A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D202F8F26A0303B003B01A6 /* SceneDelegate.swift */; };
-		4D202F9226A0303B003B01A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D202F9126A0303B003B01A6 /* ViewController.swift */; };
 		4D202F9526A0303B003B01A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D202F9326A0303B003B01A6 /* Main.storyboard */; };
 		4D202F9826A0303B003B01A6 /* BlueMorose.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D202F9626A0303B003B01A6 /* BlueMorose.xcdatamodeld */; };
-		4D202F9A26A0303C003B01A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D202F9926A0303C003B01A6 /* Assets.xcassets */; };
 		4D202F9D26A0303C003B01A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D202F9B26A0303C003B01A6 /* LaunchScreen.storyboard */; };
+		4D202FA626A03089003B01A6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D202FA526A03089003B01A6 /* HomeViewController.swift */; };
+		4D202FA826A19B16003B01A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D202FA726A19B16003B01A6 /* Assets.xcassets */; };
+		4D202FAA26A1B380003B01A6 /* TopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D202FA926A1B380003B01A6 /* TopicsViewController.swift */; };
+		4D202FAD26A1B416003B01A6 /* Topcis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D202FAC26A1B416003B01A6 /* Topcis.swift */; };
+		4D202FAF26A1D23C003B01A6 /* 憂鬱量表.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D202FAE26A1D23C003B01A6 /* 憂鬱量表.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4D202F8A26A0303B003B01A6 /* BlueMorose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueMorose.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D202F8D26A0303B003B01A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D202F8F26A0303B003B01A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4D202F9126A0303B003B01A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4D202F9426A0303B003B01A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D202F9726A0303B003B01A6 /* BlueMorose.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BlueMorose.xcdatamodel; sourceTree = "<group>"; };
-		4D202F9926A0303C003B01A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D202F9C26A0303C003B01A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D202F9E26A0303C003B01A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D202FA526A03089003B01A6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4D202FA726A19B16003B01A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		4D202FA926A1B380003B01A6 /* TopicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsViewController.swift; sourceTree = "<group>"; };
+		4D202FAC26A1B416003B01A6 /* Topcis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topcis.swift; sourceTree = "<group>"; };
+		4D202FAE26A1D23C003B01A6 /* 憂鬱量表.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "憂鬱量表.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +48,8 @@
 		4D202F8126A0303B003B01A6 = {
 			isa = PBXGroup;
 			children = (
+				4D202FAB26A1B3E7003B01A6 /* model */,
+				4D202FA426A03055003B01A6 /* controller */,
 				4D202F8C26A0303B003B01A6 /* BlueMorose */,
 				4D202F8B26A0303B003B01A6 /* Products */,
 			);
@@ -60,14 +68,31 @@
 			children = (
 				4D202F8D26A0303B003B01A6 /* AppDelegate.swift */,
 				4D202F8F26A0303B003B01A6 /* SceneDelegate.swift */,
-				4D202F9126A0303B003B01A6 /* ViewController.swift */,
 				4D202F9326A0303B003B01A6 /* Main.storyboard */,
-				4D202F9926A0303C003B01A6 /* Assets.xcassets */,
 				4D202F9B26A0303C003B01A6 /* LaunchScreen.storyboard */,
+				4D202FA726A19B16003B01A6 /* Assets.xcassets */,
 				4D202F9E26A0303C003B01A6 /* Info.plist */,
+				4D202FAE26A1D23C003B01A6 /* 憂鬱量表.json */,
 				4D202F9626A0303B003B01A6 /* BlueMorose.xcdatamodeld */,
 			);
 			path = BlueMorose;
+			sourceTree = "<group>";
+		};
+		4D202FA426A03055003B01A6 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				4D202FA526A03089003B01A6 /* HomeViewController.swift */,
+				4D202FA926A1B380003B01A6 /* TopicsViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		4D202FAB26A1B3E7003B01A6 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				4D202FAC26A1B416003B01A6 /* Topcis.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,8 +153,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D202F9D26A0303C003B01A6 /* LaunchScreen.storyboard in Resources */,
-				4D202F9A26A0303C003B01A6 /* Assets.xcassets in Resources */,
+				4D202FA826A19B16003B01A6 /* Assets.xcassets in Resources */,
 				4D202F9526A0303B003B01A6 /* Main.storyboard in Resources */,
+				4D202FAF26A1D23C003B01A6 /* 憂鬱量表.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,9 +167,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D202F9826A0303B003B01A6 /* BlueMorose.xcdatamodeld in Sources */,
-				4D202F9226A0303B003B01A6 /* ViewController.swift in Sources */,
+				4D202FAD26A1B416003B01A6 /* Topcis.swift in Sources */,
 				4D202F8E26A0303B003B01A6 /* AppDelegate.swift in Sources */,
 				4D202F9026A0303B003B01A6 /* SceneDelegate.swift in Sources */,
+				4D202FAA26A1B380003B01A6 /* TopicsViewController.swift in Sources */,
+				4D202FA626A03089003B01A6 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
