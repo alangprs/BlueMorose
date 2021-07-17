@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wQl-Sn-HdZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IWf-WJ-qQ7">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -36,16 +36,17 @@
                                             </attributedString>
                                         </state>
                                         <connections>
-                                            <segue destination="wQl-Sn-HdZ" kind="show" identifier="topic01" id="8wW-Tz-bGp"/>
+                                            <action selector="goTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4k6-wz-kuf"/>
+                                            <segue destination="wQl-Sn-HdZ" kind="show" identifier="topic01" destinationCreationSelector="showTaiwanTopic:" id="8wW-Tz-bGp"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fIc-Xc-Pgg">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fIc-Xc-Pgg">
                                         <rect key="frame" x="0.0" y="155.33333333333331" width="336" height="77.333333333333314"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
                                                 <fragment>
-                                                    <string key="content">董事憂鬱量表-大專生版
+                                                    <string key="content">董氏憂鬱量表-大專生版
 (18~24歲適用)</string>
                                                     <attributes>
                                                         <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -56,6 +57,7 @@
                                             </attributedString>
                                         </state>
                                         <connections>
+                                            <action selector="goTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0e1-Ec-2rg"/>
                                             <segue destination="wQl-Sn-HdZ" kind="show" identifier="topic02" id="qok-bh-gHw"/>
                                         </connections>
                                     </button>
@@ -75,9 +77,6 @@
                                                 </fragment>
                                             </attributedString>
                                         </state>
-                                        <connections>
-                                            <segue destination="wQl-Sn-HdZ" kind="show" identifier="topic03" id="b0A-vu-lNy"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -233,7 +232,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="b0A-vu-lNy"/>
+        <segue reference="8wW-Tz-bGp"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="linkColor">

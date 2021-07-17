@@ -16,7 +16,8 @@
 		4D202FA826A19B16003B01A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D202FA726A19B16003B01A6 /* Assets.xcassets */; };
 		4D202FAA26A1B380003B01A6 /* TopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D202FA926A1B380003B01A6 /* TopicsViewController.swift */; };
 		4D202FAD26A1B416003B01A6 /* Topcis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D202FAC26A1B416003B01A6 /* Topcis.swift */; };
-		4D202FAF26A1D23C003B01A6 /* 憂鬱量表.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D202FAE26A1D23C003B01A6 /* 憂鬱量表.json */; };
+		4D202FB526A29008003B01A6 /* 董氏憂鬱量表.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D202FB426A29008003B01A6 /* 董氏憂鬱量表.json */; };
+		4D202FB726A29A8A003B01A6 /* 台灣人憂鬱量表.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D202FB626A29A8A003B01A6 /* 台灣人憂鬱量表.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +32,8 @@
 		4D202FA726A19B16003B01A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		4D202FA926A1B380003B01A6 /* TopicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsViewController.swift; sourceTree = "<group>"; };
 		4D202FAC26A1B416003B01A6 /* Topcis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topcis.swift; sourceTree = "<group>"; };
-		4D202FAE26A1D23C003B01A6 /* 憂鬱量表.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "憂鬱量表.json"; sourceTree = "<group>"; };
+		4D202FB426A29008003B01A6 /* 董氏憂鬱量表.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "董氏憂鬱量表.json"; sourceTree = "<group>"; };
+		4D202FB626A29A8A003B01A6 /* 台灣人憂鬱量表.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "台灣人憂鬱量表.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +74,8 @@
 				4D202F9B26A0303C003B01A6 /* LaunchScreen.storyboard */,
 				4D202FA726A19B16003B01A6 /* Assets.xcassets */,
 				4D202F9E26A0303C003B01A6 /* Info.plist */,
-				4D202FAE26A1D23C003B01A6 /* 憂鬱量表.json */,
+				4D202FB626A29A8A003B01A6 /* 台灣人憂鬱量表.json */,
+				4D202FB426A29008003B01A6 /* 董氏憂鬱量表.json */,
 				4D202F9626A0303B003B01A6 /* BlueMorose.xcdatamodeld */,
 			);
 			path = BlueMorose;
@@ -155,7 +158,8 @@
 				4D202F9D26A0303C003B01A6 /* LaunchScreen.storyboard in Resources */,
 				4D202FA826A19B16003B01A6 /* Assets.xcassets in Resources */,
 				4D202F9526A0303B003B01A6 /* Main.storyboard in Resources */,
-				4D202FAF26A1D23C003B01A6 /* 憂鬱量表.json in Resources */,
+				4D202FB526A29008003B01A6 /* 董氏憂鬱量表.json in Resources */,
+				4D202FB726A29A8A003B01A6 /* 台灣人憂鬱量表.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

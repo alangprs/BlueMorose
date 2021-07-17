@@ -8,38 +8,34 @@
 import UIKit
 
 class TopicsViewController: UIViewController {
+    
+    var viewTopics = [Topics]()
+    
+    //設定viewTopics要接資料的初始值
+    init?(conder:NSCoder,viewTopics:[Topics]) {
+        self.viewTopics = viewTopics
+        super .init(coder: conder)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
 
     //0題目 1題目數量
     @IBOutlet var topicsLabel: [UILabel]!
     
-    var topics = [Topics]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("看第二頁資料",viewTopics)
        
     }
     
-
-    //取得、解碼在本地資料的題庫
-    func untieData(){
-        //因為取得data會有throws 所以要用do，才能知道錯誤的話是什麼問題
-        do {
-            //取得本地資料位置
-             let url = Bundle.main.url(forResource: "憂鬱量表", withExtension: "json")!
-                //取得資料
-                let data = try Data(contentsOf: url)
-                //解析json資料
-                 let result = try JSONDecoder().decode([Topics].self, from: data)
-            //將解析資料存回
-            self.topics = result
-            print(result)
-            
-                
-        }catch{
-            print("本地資料取得失敗",error)
-        }
- 
-    }
+    
+    
+   
 
 }
+
