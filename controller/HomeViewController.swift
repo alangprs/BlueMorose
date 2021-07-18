@@ -35,11 +35,16 @@ class HomeViewController: UIViewController {
         }
     }
     
-    
+    //台灣人憂鬱量表資料傳到第二頁
     @IBSegueAction func showTaiwanTopic(_ coder: NSCoder) -> TopicsViewController? {
-        return TopicsViewController(conder: coder, viewTopics: TaiwaneseTopics)
+        return TopicsViewController(coder: coder, taiwaneseTopics: TaiwaneseTopics)
     }
     
+    //董氏憂鬱量表 傳資料到第二頁
+    @IBSegueAction func showDongTopic(_ coder: NSCoder) -> TopicsViewController? {
+        return TopicsViewController(coder: coder, dongTopics: dongTopics)
+        
+    }
     
     
    

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IWf-WJ-qQ7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DKG-Po-CoA">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -58,7 +58,7 @@
                                         </state>
                                         <connections>
                                             <action selector="goTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0e1-Ec-2rg"/>
-                                            <segue destination="wQl-Sn-HdZ" kind="show" identifier="topic02" id="qok-bh-gHw"/>
+                                            <segue destination="wQl-Sn-HdZ" kind="show" identifier="topic02" destinationCreationSelector="showDongTopic:" id="qok-bh-gHw"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GkG-eD-Tai">
@@ -112,30 +112,42 @@
                                         <state key="normal" title="沒有或極少(每週一天以下)">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="chooseAnswers:" destination="wQl-Sn-HdZ" eventType="touchUpInside" id="7bc-5W-Gjh"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOa-dJ-leJ">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOa-dJ-leJ">
                                         <rect key="frame" x="19" y="59" width="296" height="42"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="有時候(每週1~2天)">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="chooseAnswers:" destination="wQl-Sn-HdZ" eventType="touchUpInside" id="Dgr-py-Pfy"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bix-59-sY9">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bix-59-sY9">
                                         <rect key="frame" x="19" y="118" width="296" height="42"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="時常(每週3~4天)">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="chooseAnswers:" destination="wQl-Sn-HdZ" eventType="touchUpInside" id="22v-ti-ezW"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67V-n5-P1M">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67V-n5-P1M">
                                         <rect key="frame" x="19" y="177" width="296" height="42"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="常常或總是(每週5~7天)">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="chooseAnswers:" destination="wQl-Sn-HdZ" eventType="touchUpInside" id="2MK-8j-lbB"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -206,11 +218,88 @@
                     <connections>
                         <outletCollection property="topicsLabel" destination="ycj-0L-d88" collectionClass="NSMutableArray" id="sOk-u4-pUF"/>
                         <outletCollection property="topicsLabel" destination="m1K-RR-x7L" collectionClass="NSMutableArray" id="hQW-8A-LH4"/>
+                        <segue destination="DKG-Po-CoA" kind="show" identifier="showFraction" id="U2E-Hf-Qqp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QwX-vT-sgL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1801.5384615384614" y="81.753554502369667"/>
+        </scene>
+        <!--Show Fraction View Controller-->
+        <scene sceneID="w2z-Pr-5E5">
+            <objects>
+                <viewController id="DKG-Po-CoA" customClass="ShowFractionViewController" customModule="BlueMorose" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rop-IV-FYT">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="FIp-Bb-EoJ">
+                                <rect key="frame" x="20" y="358" width="388" height="394"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="Ed0-9d-u8a">
+                                        <rect key="frame" x="5" y="5" width="378" height="384"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="顯示結果" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeA-G2-TTC">
+                                                <rect key="frame" x="10" y="10" width="358" height="364"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="HeA-G2-TTC" secondAttribute="trailing" constant="10" id="JYj-mB-blf"/>
+                                            <constraint firstItem="HeA-G2-TTC" firstAttribute="leading" secondItem="Ed0-9d-u8a" secondAttribute="leading" constant="10" id="cNi-uC-Oqd"/>
+                                            <constraint firstAttribute="bottom" secondItem="HeA-G2-TTC" secondAttribute="bottom" constant="10" id="oTK-oF-OI8"/>
+                                            <constraint firstItem="HeA-G2-TTC" firstAttribute="top" secondItem="Ed0-9d-u8a" secondAttribute="top" constant="10" id="v7G-A8-fH5"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <color key="tintColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Ed0-9d-u8a" secondAttribute="trailing" constant="5" id="A1w-P2-i4y"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ed0-9d-u8a" secondAttribute="bottom" constant="5" id="YPq-75-Q1q"/>
+                                    <constraint firstItem="Ed0-9d-u8a" firstAttribute="leading" secondItem="FIp-Bb-EoJ" secondAttribute="leading" constant="5" id="ZcK-F9-Svb"/>
+                                    <constraint firstItem="Ed0-9d-u8a" firstAttribute="top" secondItem="FIp-Bb-EoJ" secondAttribute="top" constant="5" id="uGn-jx-TQR"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E6b-o0-VRP">
+                                <rect key="frame" x="139" y="153" width="150" height="150"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0IQ-nU-0IQ">
+                                        <rect key="frame" x="44.666666666666657" y="45" width="61" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.89918034386398038" green="0.92064229746614579" blue="0.75423352112131137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="0IQ-nU-0IQ" firstAttribute="centerY" secondItem="E6b-o0-VRP" secondAttribute="centerY" id="AGT-dA-gSI"/>
+                                    <constraint firstItem="0IQ-nU-0IQ" firstAttribute="centerX" secondItem="E6b-o0-VRP" secondAttribute="centerX" id="VuU-yB-1E9"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3S6-st-umV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="E6b-o0-VRP" firstAttribute="top" secondItem="3S6-st-umV" secondAttribute="top" constant="65" id="7aR-nk-6RQ"/>
+                            <constraint firstItem="3S6-st-umV" firstAttribute="trailing" secondItem="FIp-Bb-EoJ" secondAttribute="trailing" constant="20" id="D8S-hP-DJs"/>
+                            <constraint firstItem="FIp-Bb-EoJ" firstAttribute="top" secondItem="rop-IV-FYT" secondAttribute="top" constant="358" id="JTf-2q-hVW"/>
+                            <constraint firstItem="E6b-o0-VRP" firstAttribute="leading" secondItem="3S6-st-umV" secondAttribute="leading" constant="139" id="Lci-m9-dCe"/>
+                            <constraint firstItem="FIp-Bb-EoJ" firstAttribute="centerX" secondItem="E6b-o0-VRP" secondAttribute="centerX" id="Lmf-Oo-xb3"/>
+                            <constraint firstItem="3S6-st-umV" firstAttribute="bottom" secondItem="FIp-Bb-EoJ" secondAttribute="bottom" constant="140" id="Pfy-cQ-vFo"/>
+                            <constraint firstItem="FIp-Bb-EoJ" firstAttribute="top" secondItem="E6b-o0-VRP" secondAttribute="bottom" constant="55" id="kHq-bY-xUr"/>
+                            <constraint firstItem="3S6-st-umV" firstAttribute="trailing" secondItem="E6b-o0-VRP" secondAttribute="trailing" constant="139" id="tvs-bs-8dT"/>
+                            <constraint firstItem="FIp-Bb-EoJ" firstAttribute="leading" secondItem="3S6-st-umV" secondAttribute="leading" constant="20" id="zyr-Mp-me1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nJS-50-oNb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V4l-IL-szC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2628.5046728971961" y="82.937365010799141"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NzP-8P-gI0">
@@ -232,7 +321,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8wW-Tz-bGp"/>
+        <segue reference="qok-bh-gHw"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="linkColor">

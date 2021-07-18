@@ -18,6 +18,7 @@
 		4D202FAD26A1B416003B01A6 /* Topcis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D202FAC26A1B416003B01A6 /* Topcis.swift */; };
 		4D202FB526A29008003B01A6 /* 董氏憂鬱量表.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D202FB426A29008003B01A6 /* 董氏憂鬱量表.json */; };
 		4D202FB726A29A8A003B01A6 /* 台灣人憂鬱量表.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D202FB626A29A8A003B01A6 /* 台灣人憂鬱量表.json */; };
+		4D202FB926A3DE14003B01A6 /* ShowFractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D202FB826A3DE14003B01A6 /* ShowFractionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		4D202FAC26A1B416003B01A6 /* Topcis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topcis.swift; sourceTree = "<group>"; };
 		4D202FB426A29008003B01A6 /* 董氏憂鬱量表.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "董氏憂鬱量表.json"; sourceTree = "<group>"; };
 		4D202FB626A29A8A003B01A6 /* 台灣人憂鬱量表.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "台灣人憂鬱量表.json"; sourceTree = "<group>"; };
+		4D202FB826A3DE14003B01A6 /* ShowFractionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowFractionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			children = (
 				4D202FA526A03089003B01A6 /* HomeViewController.swift */,
 				4D202FA926A1B380003B01A6 /* TopicsViewController.swift */,
+				4D202FB826A3DE14003B01A6 /* ShowFractionViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			files = (
 				4D202F9826A0303B003B01A6 /* BlueMorose.xcdatamodeld in Sources */,
 				4D202FAD26A1B416003B01A6 /* Topcis.swift in Sources */,
+				4D202FB926A3DE14003B01A6 /* ShowFractionViewController.swift in Sources */,
 				4D202F8E26A0303B003B01A6 /* AppDelegate.swift in Sources */,
 				4D202F9026A0303B003B01A6 /* SceneDelegate.swift in Sources */,
 				4D202FAA26A1B380003B01A6 /* TopicsViewController.swift in Sources */,
