@@ -29,8 +29,8 @@ class TopicsViewController: UIViewController {
     
     //0題目 1題目數量
     @IBOutlet var topicsLabel: [UILabel]!
-        
- 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,7 +52,7 @@ class TopicsViewController: UIViewController {
             break
         }
         upDataUI()
-//        print("分數",fraction)
+        
     }
     // topicsLabel[quantity] = 題目顯示，目前題目為quantity的數量
     //topicsLabel[1] = 題目數量
@@ -64,9 +64,8 @@ class TopicsViewController: UIViewController {
         }else if dongTopics.isEmpty == false{
             judegDongTopics()
         }
-       
-        
     }
+    
     //判斷台灣人憂鬱症
     func judgeTaiwaneseTopics(){
         if quantity != taiwaneseTopics[0].topic.count{
@@ -74,10 +73,7 @@ class TopicsViewController: UIViewController {
             topicsLabel[0].text = taiwaneseTopics[0].topic[quantity-1]
             topicsLabel[1].text = "\(quantity)/\(taiwaneseTopics[0].topic.count-1)"
         }else if quantity > taiwaneseTopics[0].topic.count-1{ //判斷跳下一頁
-            
-            quantity = 1 //做好跳下一頁功能刪除
-            
-            print("跳下一頁")
+            performSegue(withIdentifier: "show", sender: nil)
         }
     }
     //判斷董氏憂鬱量表
@@ -86,12 +82,16 @@ class TopicsViewController: UIViewController {
             topicsLabel[0].text = dongTopics[0].topic[quantity-1]
             topicsLabel[1].text = "\(quantity)/\(dongTopics[0].topic.count-1)"
         }else if quantity > dongTopics[0].topic.count-1{
-            
-            quantity = 1 //做好跳下一頁功能刪除
-            print("跳下一頁")
+            performSegue(withIdentifier: "show", sender: nil)
         }
     }
-
-
+    
+    //將分數傳到showFraction頁面
+    @IBSegueAction func goFraction(_ coder: NSCoder) -> ShowFractionViewController? {
+        print("檢查",fraction,quantity)
+        return ShowFractionViewController(coder: coder, fraction: fraction, quantity: quantity)
+        
+    }
+    
 }
 

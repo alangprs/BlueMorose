@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DKG-Po-CoA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IWf-WJ-qQ7">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -170,7 +171,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycj-0L-d88">
                                                         <rect key="frame" x="0.0" y="0.0" width="352" height="238"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -218,7 +219,7 @@
                     <connections>
                         <outletCollection property="topicsLabel" destination="ycj-0L-d88" collectionClass="NSMutableArray" id="sOk-u4-pUF"/>
                         <outletCollection property="topicsLabel" destination="m1K-RR-x7L" collectionClass="NSMutableArray" id="hQW-8A-LH4"/>
-                        <segue destination="DKG-Po-CoA" kind="show" identifier="showFraction" id="U2E-Hf-Qqp"/>
+                        <segue destination="DKG-Po-CoA" kind="show" identifier="show" destinationCreationSelector="goFraction:" id="U2E-Hf-Qqp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QwX-vT-sgL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -228,8 +229,8 @@
         <!--Show Fraction View Controller-->
         <scene sceneID="w2z-Pr-5E5">
             <objects>
-                <viewController id="DKG-Po-CoA" customClass="ShowFractionViewController" customModule="BlueMorose" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rop-IV-FYT">
+                <viewController storyboardIdentifier="ShowFractionViewController" id="DKG-Po-CoA" customClass="ShowFractionViewController" customModule="BlueMorose" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="ShowFractionViewController" id="rop-IV-FYT">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -295,11 +296,23 @@
                             <constraint firstItem="FIp-Bb-EoJ" firstAttribute="leading" secondItem="3S6-st-umV" secondAttribute="leading" constant="20" id="zyr-Mp-me1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="nJS-50-oNb"/>
+                    <navigationItem key="navigationItem" id="nJS-50-oNb">
+                        <barButtonItem key="leftBarButtonItem" title="back" id="BAR-J1-1a8">
+                            <imageReference key="image" image="chevron.backward" catalog="system" symbolScale="large"/>
+                            <connections>
+                                <segue destination="lSb-SK-OZ9" kind="unwind" unwindAction="unwindToShowFractionController:" id="DQz-5c-Bhy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outletCollection property="showFractionLabels" destination="0IQ-nU-0IQ" collectionClass="NSMutableArray" id="zd5-KR-D6I"/>
+                        <outletCollection property="showFractionLabels" destination="HeA-G2-TTC" collectionClass="NSMutableArray" id="hwj-7r-Oqp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V4l-IL-szC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="lSb-SK-OZ9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2628.5046728971961" y="82.937365010799141"/>
+            <point key="canvasLocation" x="2581" y="83"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NzP-8P-gI0">
@@ -324,6 +337,7 @@
         <segue reference="qok-bh-gHw"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
